@@ -6,7 +6,8 @@ szpm_file = Dir["#{ARGV[0]}/*.szpm"].first
 szpm = JSON.parse(File.read(szpm_file))
 szpm['version'] = ARGV[1]
 szpm['files'] = szpm['files'].map do |file|
-  file['location'] = Base64.encode64(File.read("#{ARGV[0]}/#{file['location']}")).strip
+  file['encode'] = 'base64'
+  file['content'] = Base64.encode64(File.read("#{ARGV[0]}/#{file['location']}")).strip
   file
 end
 
