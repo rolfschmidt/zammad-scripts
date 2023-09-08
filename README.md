@@ -15,7 +15,7 @@ There are no dependencies.
 To setup the scripts I would recommend you to clone the repository in your home directory (e.g. my home directory is /home/ubuntu-rs):
 
 ```bash
-ubuntu-rs@ubuntu-rs:~/zammad-scripts$ cd ~
+ubuntu-rs@ubuntu-rs:/opt/zammad$ cd ~
 ubuntu-rs@ubuntu-rs:~$ git clone git@github.com:rolfschmidt/zammad-scripts.git
 ```
 
