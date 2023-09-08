@@ -149,3 +149,13 @@ ubuntu-rs@ubuntu-rs:/workspace/git_zammad/Example-NewProject$ cat example-new_pr
   ]
 }
 ```
+
+## Optional Settings
+
+You can modify the default data of the new SZPM with ENVs. Just add the following exports to your `~/.bashrc`:
+
+```bash
+export ZAMMAD_SCRIPTS_VENDOR="Peter"
+export ZAMMAD_SCRIPTS_URL="https://github.com/abc"
+export ZAMMAD_LICENSE="GNU AFFERO GENERAL PUBLIC LICENSE"
+```

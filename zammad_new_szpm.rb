@@ -5,11 +5,15 @@ filename = "#{ARGV[0]}/#{name.szpm_name}.szpm"
 
 puts "create new szpm #{filename}..."
 
+vendor = ENV['ZAMMAD_SCRIPTS_VENDOR'] || 'Example GmbH'
+license = ENV['ZAMMAD_SCRIPTS_LICENSE'] || 'GNU AFFERO GENERAL PUBLIC LICENSE'
+url = ENV['ZAMMAD_SCRIPTS_URL'] || 'http://example.com/'
+
 File.write(filename, %Q[{
   "name": "#{name}",
   "version": "1.0.0",
-  "vendor": "Example GmbH",
-  "license": "GNU AFFERO GENERAL PUBLIC LICENSE",
-  "url": "http://example.com/",
+  "vendor": "#{vendor}",
+  "license": "#{license}",
+  "url": "#{url}",
   "files": []
 }])
