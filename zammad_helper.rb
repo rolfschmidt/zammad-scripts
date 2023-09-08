@@ -1,5 +1,6 @@
 require 'json'
 require 'base64'
+require 'fileutils'
 
 class String
   def szpm_name

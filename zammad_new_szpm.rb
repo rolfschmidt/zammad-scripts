@@ -1,8 +1,11 @@
 require "#{__dir__}/zammad_helper.rb"
 
 name = ARGV[0].split('/')[-1]
+filename = name.szpm_name
 
-File.write("#{ARGV[0]}/#{name.szpm_name}.szpm", %Q[{
+puts "create zzpm #{filename}..."
+
+File.write("#{ARGV[0]}/#{filename}.szpm", %Q[{
   "name": "#{name}",
   "version": "1.0.0",
   "vendor": "Example GmbH",

@@ -13,5 +13,8 @@ end
 zpm_file = szpm_file.split('.')
 zpm_file[-2] += "-#{ARGV[1]}"
 zpm_file[-1] = 'zpm'
+zpm_file = zpm_file.join('.')
 
-File.write(zpm_file.join('.'), "#{JSON.pretty_generate(szpm)}\n")
+puts "create zpm #{zpm_file}..."
+
+File.write(zpm_file, "#{JSON.pretty_generate(szpm)}\n")
