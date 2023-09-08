@@ -1,5 +1,4 @@
-require 'json'
-require 'base64'
+require "#{__dir__}/zammad_helper.rb"
 
 szpm_file = Dir["#{ARGV[0]}/*.szpm"].first
 

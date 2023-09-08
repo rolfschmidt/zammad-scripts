@@ -1,4 +1,4 @@
-require 'json'
+require "#{__dir__}/zammad_helper.rb"
 
 files = Dir["#{ARGV[0]}/**/*.*"].select{|f| f !~ /.*\.(md|szpm|zpm)/ }.map {|f| { location: f.sub("#{ARGV[0]}/", ''), permission: 644 } }
 

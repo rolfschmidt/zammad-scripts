@@ -1,9 +1,8 @@
-require 'json'
-require 'base64'
+require "#{__dir__}/zammad_helper.rb"
 
 name = ARGV[0].split('/')[-1]
 
-File.write("#{ARGV[0]}/#{name.gsub(/([^-])([A-Z])/, '\1_\2').downcase}.szpm", %Q[{
+File.write("#{ARGV[0]}/#{name.szpm_name}.szpm", %Q[{
   "name": "#{name}",
   "version": "1.0.0",
   "vendor": "Example GmbH",
