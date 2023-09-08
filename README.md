@@ -157,5 +157,5 @@ You can modify the default data of the new SZPM with ENVs. Just add the followin
 ```bash
 export ZAMMAD_SCRIPTS_VENDOR="Peter"
 export ZAMMAD_SCRIPTS_URL="https://github.com/abc"
-export ZAMMAD_LICENSE="GNU AFFERO GENERAL PUBLIC LICENSE"
+export ZAMMAD_SCRIPTS_LICENSE="GNU AFFERO GENERAL PUBLIC LICENSE"
 ```
