@@ -15,6 +15,6 @@ zpm_file[-2] += "-#{ARGV[1]}"
 zpm_file[-1] = 'zpm'
 zpm_file = zpm_file.join('.')
 
-puts "create zpm #{zpm_file}..."
+puts "create zpm #{zpm_file}"
 
 File.write(zpm_file, "#{JSON.pretty_generate(szpm)}\n")

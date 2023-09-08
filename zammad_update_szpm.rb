@@ -7,6 +7,6 @@ szpm_file = Dir["#{ARGV[0]}/*.szpm"].first
 szpm = JSON.parse(File.read(szpm_file))
 szpm['files'] = files
 
-puts "Updated file list in szpm file #{szpm_file} ..."
+puts "Updated file list in szpm file #{szpm_file}"
 
 File.write(szpm_file, "#{JSON.pretty_generate(szpm)}\n")

@@ -1,6 +1,12 @@
 require 'json'
 require 'base64'
 require 'fileutils'
+require 'net/http'
+require 'uri'
+
+VENDOR = ENV['ZAMMAD_SCRIPTS_VENDOR'] || 'Example GmbH'
+LICENSE = ENV['ZAMMAD_SCRIPTS_LICENSE'] || 'MIT'
+URL = ENV['ZAMMAD_SCRIPTS_URL'] || 'http://example.com/'
 
 class String
   def szpm_name
