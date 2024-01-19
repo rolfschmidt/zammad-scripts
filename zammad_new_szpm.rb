@@ -15,7 +15,7 @@ File.write(filename, %Q[{
 }])
 
 license_filename = "#{ARGV[0]}/LICENSE"
-if !File.exists?(license_filename) && (LICENSE == 'MIT' || LICENSE == 'GNU AFFERO GENERAL PUBLIC LICENSE')
+if !File.exist?(license_filename) && (LICENSE == 'MIT' || LICENSE == 'GNU AFFERO GENERAL PUBLIC LICENSE')
   if LICENSE == 'MIT'
     text = %Q[MIT License
 
@@ -708,7 +708,7 @@ For more information on this, and how to apply and follow the GNU AGPL, see
 end
 
 ignore_filename = "#{ARGV[0]}/.gitignore"
-if !File.exists?(ignore_filename)
+if !File.exist?(ignore_filename)
   text = Net::HTTP.get(URI.parse('https://raw.githubusercontent.com/zammad/zammad/develop/.gitignore'))
 
   File.write(ignore_filename, text)
