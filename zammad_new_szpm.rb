@@ -11,6 +11,17 @@ File.write(filename, %Q[{
   "vendor": "#{VENDOR}",
   "license": "#{LICENSE}",
   "url": "#{URL}",
+  "changelog": [],
+  "description": [
+    {
+      "language": "en",
+      "text": "This package contains the functionality to ... ."
+    },
+    {
+      "language": "de",
+      "text": "Dieses Paket enthält die Funktionalität um ... ."
+    }
+  ],
   "files": []
 }])
 
