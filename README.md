@@ -193,10 +193,10 @@ This will unlink the zammad package into a zammad directory.
 
 ```
 ubuntu-rs@ubuntu-rs:/workspace/zammad$ git zammad-unlink Example-HelloWorld
-Unlink file: /workspace/git_zammad/zammad//example-hello_world-1.0.0.zpm
-Unlink file: /workspace/git_zammad/zammad//example-hello_world-1.0.2.zpm
-Unlink file: /workspace/git_zammad/zammad//example-hello_world.szpm
-Unlink file: /workspace/git_zammad/zammad//public/assets/hello.txt
+Unlink file: /workspace/git_zammad/zammad/example-hello_world-1.0.0.zpm
+Unlink file: /workspace/git_zammad/zammad/example-hello_world-1.0.2.zpm
+Unlink file: /workspace/git_zammad/zammad/example-hello_world.szpm
+Unlink file: /workspace/git_zammad/zammad/public/assets/hello.txt
 ```
 
 ## Optional Settings
