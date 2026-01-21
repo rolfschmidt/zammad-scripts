@@ -132,6 +132,29 @@ ubuntu-rs@ubuntu-rs:/workspace/git_zammad/Example-NewProject$ cat example-new_pr
 This will create a final package which is installable by zammad.
 
 ```bash
+ubuntu-rs@ubuntu-rs:/workspace/git_zammad/Example-NewProject$ git zammad-create-zpm
+create zpm /workspace/git_zammad/Example-NewProject/example-new_project-1.0.0.zpm...
+ubuntu-rs@ubuntu-rs:/workspace/git_zammad/Example-NewProject$ cat example-new_project-1.0.0.zpm
+{
+  "name": "Example-NewProject",
+  "version": "1.0.0",
+  "vendor": "Example GmbH",
+  "license": "GNU AFFERO GENERAL PUBLIC LICENSE",
+  "url": "http://example.com/",
+  "files": [
+    {
+      "location": "db/addon/example_new_project/20230908080759_create_base.rb",
+      "permission": 644,
+      "encode": "base64",
+      "content": "Y2xhc3MgQ3JlYXRlQmFzZSA8IEFjdGl2ZVJlY29yZDo6TWlncmF0aW9uWzQu\nMl0KICBkZWYgc2VsZi51cAogIGVuZAoKICBkZWYgc2VsZi5kb3duCiAgZW5k\nCmVuZAo="
+    }
+  ]
+}
+```
+
+or with version parameter:
+
+```
 ubuntu-rs@ubuntu-rs:/workspace/git_zammad/Example-NewProject$ git zammad-create-zpm 1.0.0
 create zpm /workspace/git_zammad/Example-NewProject/example-new_project-1.0.0.zpm...
 ubuntu-rs@ubuntu-rs:/workspace/git_zammad/Example-NewProject$ cat example-new_project-1.0.0.zpm
