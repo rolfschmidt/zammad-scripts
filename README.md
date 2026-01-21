@@ -34,6 +34,8 @@ zammad-new-szpm = !ruby /home/ubuntu-rs/zammad-scripts/zammad_new_szpm.rb $(pwd)
 zammad-update-szpm = !ruby /home/ubuntu-rs/zammad-scripts/zammad_update_szpm.rb $(pwd)
 zammad-create-zpm = !ruby /home/ubuntu-rs/zammad-scripts/zammad_create_zpm.rb $(pwd) $1
 zammad-migration = !ruby /home/ubuntu-rs/zammad-scripts/zammad_migration.rb $(pwd) $1
+zammad-link = !ruby /home/ubuntu-rs/zammad-scripts/zammad_link.rb /workspace/git_zammad/zammad /workspace/git_zammad/$1
+zammad-unlink = !ruby /home/ubuntu-rs/zammad-scripts/zammad_unlink.rb /workspace/git_zammad/zammad /workspace/git_zammad/$1
 ```
 
 ## Setup a new project
@@ -148,6 +150,30 @@ ubuntu-rs@ubuntu-rs:/workspace/git_zammad/Example-NewProject$ cat example-new_pr
     }
   ]
 }
+```
+
+### Link zammad package
+
+This will link the zammad package into a zammad directory.
+
+```
+ubuntu-rs@ubuntu-rs:/workspace/zammad$ git zammad-link Example-HelloWorld
+Link file: /workspace/git_zammad/Example-HelloWorld/example-hello_world-1.0.0.zpm -> /workspace/git_zammad/zammad/example-hello_world-1.0.0.zpm
+Link file: /workspace/git_zammad/Example-HelloWorld/example-hello_world-1.0.2.zpm -> /workspace/git_zammad/zammad/example-hello_world-1.0.2.zpm
+Link file: /workspace/git_zammad/Example-HelloWorld/example-hello_world.szpm -> /workspace/git_zammad/zammad/example-hello_world.szpm
+Link file: /workspace/git_zammad/Example-HelloWorld/public/assets/hello.txt -> /workspace/git_zammad/zammad/public/assets/hello.txt
+```
+
+### Unlink zammad package
+
+This will unlink the zammad package into a zammad directory.
+
+```
+ubuntu-rs@ubuntu-rs:/workspace/zammad$ git zammad-unlink Example-HelloWorld
+Unlink file: /workspace/git_zammad/zammad//example-hello_world-1.0.0.zpm
+Unlink file: /workspace/git_zammad/zammad//example-hello_world-1.0.2.zpm
+Unlink file: /workspace/git_zammad/zammad//example-hello_world.szpm
+Unlink file: /workspace/git_zammad/zammad//public/assets/hello.txt
 ```
 
 ## Optional Settings

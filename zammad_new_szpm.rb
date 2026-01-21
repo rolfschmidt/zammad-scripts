@@ -1,5 +1,12 @@
 require "#{__dir__}/zammad_helper.rb"
 
+if ARGV[0].to_s.empty?
+  puts "Usage:"
+  puts "\truby #{File.expand_path(__FILE__)} /workspace/Example-Addon"
+  puts ""
+  exit
+end
+
 name = ARGV[0].split('/')[-1]
 filename = "#{ARGV[0]}/#{name.szpm_name}.szpm"
 

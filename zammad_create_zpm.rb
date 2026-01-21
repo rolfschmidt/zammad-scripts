@@ -1,5 +1,12 @@
 require "#{__dir__}/zammad_helper.rb"
 
+if ARGV[0].to_s.empty? || ARGV[1].to_s.empty?
+  puts "Usage:"
+  puts "\truby #{File.expand_path(__FILE__)} /workspace/Example-Addon 1.0.0"
+  puts ""
+  exit
+end
+
 szpm_file = Dir["#{ARGV[0]}/*.szpm"].first
 
 szpm = JSON.parse(File.read(szpm_file))
