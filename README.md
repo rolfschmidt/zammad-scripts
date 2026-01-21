@@ -177,7 +177,7 @@ ubuntu-rs@ubuntu-rs:/workspace/git_zammad/Example-NewProject$ cat example-new_pr
 
 ### Link zammad package
 
-This will link the zammad package into a zammad directory.
+This will link the zammad package into the zammad directory.
 
 ```
 ubuntu-rs@ubuntu-rs:/workspace/zammad$ git zammad-link Example-HelloWorld
@@ -187,7 +187,7 @@ Link file: /workspace/git_zammad/Example-HelloWorld/public/assets/hello.txt -> /
 
 ### Unlink zammad package
 
-This will unlink the zammad package into a zammad directory.
+This will unlink the zammad package from the zammad directory.
 
 ```
 ubuntu-rs@ubuntu-rs:/workspace/zammad$ git zammad-unlink Example-HelloWorld
