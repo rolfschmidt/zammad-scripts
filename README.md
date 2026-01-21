@@ -181,8 +181,6 @@ This will link the zammad package into a zammad directory.
 
 ```
 ubuntu-rs@ubuntu-rs:/workspace/zammad$ git zammad-link Example-HelloWorld
-Link file: /workspace/git_zammad/Example-HelloWorld/example-hello_world-1.0.0.zpm -> /workspace/git_zammad/zammad/example-hello_world-1.0.0.zpm
-Link file: /workspace/git_zammad/Example-HelloWorld/example-hello_world-1.0.2.zpm -> /workspace/git_zammad/zammad/example-hello_world-1.0.2.zpm
 Link file: /workspace/git_zammad/Example-HelloWorld/example-hello_world.szpm -> /workspace/git_zammad/zammad/example-hello_world.szpm
 Link file: /workspace/git_zammad/Example-HelloWorld/public/assets/hello.txt -> /workspace/git_zammad/zammad/public/assets/hello.txt
 ```
@@ -193,8 +191,6 @@ This will unlink the zammad package into a zammad directory.
 
 ```
 ubuntu-rs@ubuntu-rs:/workspace/zammad$ git zammad-unlink Example-HelloWorld
-Unlink file: /workspace/git_zammad/zammad/example-hello_world-1.0.0.zpm
-Unlink file: /workspace/git_zammad/zammad/example-hello_world-1.0.2.zpm
 Unlink file: /workspace/git_zammad/zammad/example-hello_world.szpm
 Unlink file: /workspace/git_zammad/zammad/public/assets/hello.txt
 ```

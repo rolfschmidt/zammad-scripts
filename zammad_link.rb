@@ -16,6 +16,7 @@ Dir.glob("#{package_base_dir}/**/*") do |entry|
   file = file.sub(%r{^/}, '')
 
   next if file.start_with?('README')
+  next if file.end_with?('.zpm')
 
   dest = "#{root_dir}/#{file}"
   if File.directory?(entry.to_s) && !File.exist?(dest.to_s)
