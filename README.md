@@ -199,8 +199,30 @@ Unlink file: /workspace/git_zammad/zammad/public/assets/hello.txt
 
 You can modify the default data of the new SZPM with ENVs. Just add the following exports to your `~/.bashrc`:
 
+**ZAMMAD_SCRIPTS_VENDOR**
+
+Defines your zpm vendor.
+
+**ZAMMAD_SCRIPTS_URL**
+
+Defines your zpm vendor url.
+
+**ZAMMAD_SCRIPTS_LICENSE**
+
+Defines your zpm license.
+
+**ZAMMAD_SCRIPTS_SKIP_LICENSE**
+
+Defines to skip license file on new szpm creation.
+
+**ZAMMAD_SCRIPTS_SKIP_GIT_IGNORE**
+
+Defines to skip .gitignore file on new szpm creation.
+
 ```bash
 export ZAMMAD_SCRIPTS_VENDOR="Your name"
 export ZAMMAD_SCRIPTS_URL="https://github.com/yourname"
 export ZAMMAD_SCRIPTS_LICENSE="GNU AFFERO GENERAL PUBLIC LICENSE"
+export ZAMMAD_SCRIPTS_SKIP_LICENSE=1
+export ZAMMAD_SCRIPTS_SKIP_GIT_IGNORE=1
 ```
