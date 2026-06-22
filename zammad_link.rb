@@ -9,6 +9,9 @@ end
 
 root_dir         = ARGV[0]
 package_base_dir = ARGV[1]
+
+display = short_display(root_dir, package_base_dir)
+
 Dir.glob("#{package_base_dir}/**/*") do |entry|
   entry = entry.sub('//', '/')
   file = entry
@@ -20,7 +23,7 @@ Dir.glob("#{package_base_dir}/**/*") do |entry|
 
   dest = "#{root_dir}/#{file}"
   if File.directory?(entry.to_s) && !File.exist?(dest.to_s)
-    puts "Create dir: #{dest}"
+    puts "Create dir: #{display.(dest)}"
     FileUtils.mkdir_p(dest.to_s)
   end
 
@@ -30,7 +33,7 @@ Dir.glob("#{package_base_dir}/**/*") do |entry|
       raise "Can't link #{entry} -> #{dest}, destination and .link_backup already exists!"
     end
 
-    puts "Create backup file of #{dest} -> #{backup_file}."
+    puts "Create backup file of #{display.(dest)} -> #{display.(backup_file)}."
     File.rename(dest.to_s, backup_file)
   end
 
@@ -38,7 +41,7 @@ Dir.glob("#{package_base_dir}/**/*") do |entry|
     if File.symlink?(dest.to_s)
       File.delete(dest.to_s)
     end
-    puts "Link file: #{entry} -> #{dest}"
+    puts "Link file: #{display.(entry)} -> #{display.(dest)}"
     File.symlink(entry.to_s, dest.to_s)
   end
 end

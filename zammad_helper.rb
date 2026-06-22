@@ -8,6 +8,12 @@ VENDOR = ENV['ZAMMAD_SCRIPTS_VENDOR'] || 'Example GmbH'
 LICENSE = ENV['ZAMMAD_SCRIPTS_LICENSE'] || 'MIT'
 URL = ENV['ZAMMAD_SCRIPTS_URL'] || 'http://example.com/'
 
+def short_display(root_dir, package_base_dir)
+  common_base = root_dir.split('/').zip(package_base_dir.split('/')).take_while { |a, b| a == b }.map(&:first).join('/')
+  puts "Base: #{common_base}" unless common_base.empty?
+  ->(path) { common_base.empty? ? path : path.sub(common_base, '') }
+end
+
 class String
   def szpm_name
     split = self.split('-').map(&:underscore).join('-')

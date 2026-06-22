@@ -9,6 +9,8 @@ end
 
 root_dir         = ARGV[0]
 package_base_dir = ARGV[1]
+display          = short_display(root_dir, package_base_dir)
+
 Dir.glob("#{package_base_dir}/**/*") do |entry|
   entry = entry.sub('//', '/')
   file = entry
@@ -16,13 +18,13 @@ Dir.glob("#{package_base_dir}/**/*") do |entry|
   dest = "#{root_dir}/#{file}"
 
   if File.symlink?(dest.to_s)
-    puts "Unlink file: #{dest}"
+    puts "Unlink file: #{display.(dest)}"
     File.delete(dest.to_s)
   end
 
   backup_file = "#{dest}.link_backup"
   if File.exist?(backup_file)
-    puts "Restore backup file of #{backup_file} -> #{dest}."
+    puts "Restore backup file of #{display.(backup_file)} -> #{display.(dest)}."
     File.rename(backup_file, dest.to_s)
   end
 end
