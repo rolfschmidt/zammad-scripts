@@ -12,10 +12,7 @@ end
 root_dir         = ARGV[0]
 package_base_dir = ARGV[1]
 
-if Dir.glob("#{package_base_dir}/*.szpm").empty?
-  puts "Error: No .szpm file found in #{package_base_dir}. Are you sure this is an addon directory?"
-  exit 1
-end
+check_package_base_dir!(package_base_dir)
 
 display = short_display(root_dir, package_base_dir)
 
