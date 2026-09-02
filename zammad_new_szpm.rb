@@ -18,7 +18,7 @@ File.write(filename, %Q[{
   "vendor": "#{VENDOR}",
   "license": "#{LICENSE}",
   "url": "#{URL}",
-  "changelog": [],
+  "change_log": [],
   "description": [
     {
       "language": "en",
